@@ -1,0 +1,41 @@
+{
+	"wallets": [
+		{
+			"name": "vertcoin",
+			"dir": "/home/<user>/Downloads/vertcoin",
+			"url": "https://github.com/vertcoin/vertcoin"
+		},
+		{
+			"name": "darkcoin",
+			"dir": "/home/<user>/Downloads/darkcoin",
+			"url": "https://github.com/evan82/darkcoin"
+		},
+		{
+			"name": "reddcoin",
+			"url": "https://github.com/reddcoin/reddcoin"
+		},
+		{
+			"name": "dogecoin",
+			"dir": "/home/<user>/Downloads/dogecoin",
+			"url": "https://github.com/dogecoin/dogecoin"
+		},
+		{
+			"name": "litecoin",
+			"dir": "/home/<user>/Downloads/litecoin",
+			"url": "https://github.com/litecoin-project/litecoin"
+		},
+		{
+			"name": "Hirocoin",
+			"qt_exe": "hirocoin-qt",
+			"wallet_file": "/home/<user>/.hirocoin/wallet.dat",
+			"dir": "/home/<user>/Downloads/Hirocoin",
+			"url": "https://github.com/HiroSatou/Hirocoin"
+		},
+		{
+			"name": "DopeCoin",
+			"dir": "/home/<user>/Downloads/DopeCoin",
+			"url": "https://github.com/dopecoin-dev/DopeCoin",
+			"pre_make": "cd src/; make -f makefile.unix; cd ..; "
+		}
+	]
+}

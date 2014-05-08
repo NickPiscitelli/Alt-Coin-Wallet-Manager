@@ -6,7 +6,7 @@ Run on either all or coins passed in argument. Execute examples listed below.
 
 # Script Arguments
 
-__conf__: Location of JSON Wallet conf file. (Defaults to ~/wallet_conf.json)
+__conf__: Location of JSON Wallet conf file. (Defaults to <pwd>/wallet_conf.json)
 
 __actions__: Comma separated list of actions (See below)
 
@@ -49,6 +49,11 @@ __url__: The Github Src URL, required for "make"
 __qt_exe__: Optional name of built executable if different
 
 __wallet_file__: Location to wallet file if different
+
+__active__: Disable a wallet without removing conf
+
+__backup_only __: Only perform reload/backup options. Useful if
+any wallets are from a package repo.
 
 __pre_make__: Optional bash commands to run before qmake/make if
 using "make" action

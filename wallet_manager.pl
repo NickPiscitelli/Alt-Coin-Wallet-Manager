@@ -35,7 +35,7 @@ if (!$wallets && !$disable_prompt){
 }
 
 my $base = '/home/'.$ENV{USER}.'/';
-$conf_file ||= $base.'wallet_conf.json';
+$conf_file ||= './wallet_conf.json';
 $actions ||= 'lauch';
 $make_dir ||= `pwd`;
 chomp $make_dir;
@@ -76,7 +76,7 @@ if ($update_conf) {
 sub fetch_wallet {
 	my $wallet = shift;
 	my $wallet_conf = (grep {
-		$_->{name} eq $wallet
+		$_->{active} && $_->{name} eq $wallet
 	} @{$conf->{wallets}})[0];
 	die "Can't get wallet conf for $wallet!"
 		unless ref $wallet_conf eq 'HASH';
@@ -94,6 +94,7 @@ sub dispatcher_subs {
 	return (
 	launch => sub {
 		my ($wallet) = @_;
+		next if $wallet->{backup_only};
 		if (proc_exists($wallet)){
 			print "$wallet->{name} is already running!\n"
 				unless $quiet;
